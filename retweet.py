@@ -11,10 +11,10 @@ def api():
     return tweepy.API(auth)
 
 
-def retweet(tweepy_api: tweepy.API, hashtag: str, delay=60):
+def retweet(tweepy_api: tweepy.API, hashtag: str, delay=60, items=10):
     print(f"*** \n{datetime.datetime.now()}\n***")
 
-    for tweet in tweepy.Cursor(tweepy_api.search_tweets, q=hashtag).items(10):
+    for tweet in tweepy.Cursor(tweepy_api.search_tweets, q=hashtag).items(items):
         try:
             # print(tweet) # prints all the metadata that the tweet has
             tweet_id = dict(tweet._json)["id"]
@@ -24,10 +24,10 @@ def retweet(tweepy_api: tweepy.API, hashtag: str, delay=60):
             print("text: " + str(tweet_text)[0:70] + "...")
 
             # Retweets the tweet
-            api.retweet(tweet_id)
+            tweepy_api.retweet(tweet_id)
 
             # Adds the tweet as a favourite
-            api.create_favorite(tweet_id)
+            tweepy_api.create_favorite(tweet_id)
 
         except tweepy.TweepyException as error:
             print(error)
@@ -41,4 +41,4 @@ if __name__ == '__main__':
     api = api()
 
     while True:
-        retweet(api, '#pythonize', 10)
+        retweet(api, '#YOUR_HASHTAG', delay=10, items=10)
