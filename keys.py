@@ -1,5 +1,5 @@
-api_key = 'YOUR_KEY'
-api_secret = 'YOUR_KEY'
-bearer_token = 'YOUR_KEY'
-access_token = 'YOUR_KEY'
-access_token_secret = 'YOUR_KEY'
+api_key =cyma3Rv00hf2XPlxd6gHsdEVr
+api_secret =9n8Q8980bLnQLJFJzQY62mny2pygwW64KROmMtw9SgtkxyDcbu
+bearer_token = AAAAAAAAAAAAAAAAAAAAABcSjgEAAAAAr9Sb9Dk5GCKWiElQiNRmyJtxFcY%3DiK8Rppr2uYq4RDB6MDtduJKyjBGYpXQYctPdfrTZRTUnAonu3X
+access_token = 1593089695067652096-JAgDN6IaR7CTQmyIy2Fz79DU9mqFsU
+access_token_secret = TDyoVVLOlewgTbKQDdBAQU0I7hEFSgT0pAFijXC477Y1P
